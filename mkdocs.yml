@@ -1,4 +1,56 @@
 site_name: My Docs
 
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.top
+    - content.code.annotate
+  language: zh
+
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate 
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+nav:
+    - Home: index.md
+    - 前端:
+      - Vue: vue/入门.md
+
+    - 其它: 
+      - admonitions: anotations.md
+      - git: others/git.md
+      - debug: others/debug.md
